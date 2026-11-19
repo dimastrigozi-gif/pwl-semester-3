@@ -30,7 +30,7 @@ Route::prefix('organizer')->name('organizer.')->group(function () {
     Route::post('/buat-turnamen', [OrganizerController::class, 'simpanTurnamen'])->name('simpan-turnamen');
 });
 
-// kalau halamannya gak ada
+// apabila halamannya gak ada
 Route::fallback(function () {
     return response()->view('pages.404', [], 404);
 });
